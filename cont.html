@@ -71,13 +71,13 @@
     </div>
     <ul class="app-menu">
       <li>
-        <a class="app-menu__item active" href="index.html">
+        <a class="app-menu__item " href="index.html">
           <i class="app-menu__icon fa fa-user"></i>
           <span class="app-menu__label">User Details</span>
         </a>
       </li>
       <li>
-        <a class="app-menu__item" href="cont.html">
+        <a class="app-menu__item active" href="cont.html">
           <i class="app-menu__icon fa fa-users"></i>
           <span class="app-menu__label"> Contestants</span>
         </a>
@@ -122,20 +122,21 @@
     <div class="app-title">
       <div>
         <h1>
-          <i class="fa fa-user"></i> User Details</h1>
+          <i class="fa fa-users"></i> Contestants</h1>
       </div>
       <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item">
           <i class="fa fa-home fa-lg"></i>
         </li>
         <li class="breadcrumb-item">
-          <a href="index.html">User Details</a>
+          <a href="cont.html">Contestants</a>
         </li>
       </ul>
     </div>
 
     <!--Begin Company Table-->
-
+    <div class="row">
+        <div class="col-md-7.4 offset-1">
     <table class="table table-hover table-dark table-responsive">
         <thead-dark>
           <tr>
@@ -148,7 +149,7 @@
             <th scope="col">Height</th>
             <th scope="col">Weight</th>
             <th scope="col">Purpose</th>
-            <th scope="col">Status</th>
+            <th scope="col">Reject</th>
            
           </tr>
         </thead>
@@ -165,11 +166,11 @@
             <td>160cm</td>
             <td>55kg</td>
             <td><!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
                 Purpose
               </button>
               </td>
-            <td><button type="button" class="btn btn-success btn-sm">Approve</button><button type="button" class="btn btn-danger btn-sm" >Reject</button></td>
+            <td><button type="button" class="btn btn-danger btn-sm" >Reject</button></td>
            
           </tr>
           <tr>
@@ -184,16 +185,17 @@
               <td>160cm</td>
               <td>55kg</td>
               <td><!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
                   Purpose
                 </button>
                 </td>
-              <td><button type="button" class="btn btn-success btn-sm">Approve</button><button type="button" class="btn btn-danger btn-sm">Reject</button></td>
+              <td><button type="button" class="btn btn-danger btn-sm">Reject</button></td>
               
             </tr>
         </tbody>
       </table>
-
+    </div>
+  </div>
     <!--End Company Table-->
 
 

@@ -71,7 +71,7 @@
     </div>
     <ul class="app-menu">
       <li>
-        <a class="app-menu__item active" href="index.html">
+        <a class="app-menu__item " href="index.html">
           <i class="app-menu__icon fa fa-user"></i>
           <span class="app-menu__label">User Details</span>
         </a>
@@ -89,7 +89,7 @@
         </a>
       </li>
       <li>
-          <a class="app-menu__item" href="sched.html">
+          <a class="app-menu__item active" href="sched.html">
             <i class="app-menu__icon fa fa-calendar" aria-hidden="true"></i>
             <span class="app-menu__label"> Schedule</span>
           </a>
@@ -122,124 +122,191 @@
     <div class="app-title">
       <div>
         <h1>
-          <i class="fa fa-user"></i> User Details</h1>
+          <i class="fa fa-calendar"></i> Schedule</h1>
       </div>
       <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item">
           <i class="fa fa-home fa-lg"></i>
         </li>
         <li class="breadcrumb-item">
-          <a href="index.html">User Details</a>
+          <a href="sched.html">Schedule</a>
         </li>
       </ul>
     </div>
 
     <!--Begin Company Table-->
 
+    
+
+
+<div class="row">
+    <div class="col-md-7.4 offset-2">
     <table class="table table-hover table-dark table-responsive">
         <thead-dark>
           <tr>
             <th scope="col">Sl. No.</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Date Of Birth(Age)</th>
-            <th scope="col">Image</th>
-            <th scope="col">Height</th>
-            <th scope="col">Weight</th>
-            <th scope="col">Purpose</th>
-            <th scope="col">Status</th>
+            <th scope="col">Date</th>
+            <th scope="col">Day</th>
+            <th scope="col">Venue</th>
+            <th scope="col">Time</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
            
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Anna</td>
-            <td>anna@gmail.com</td>
-            <td>9999999999</td>
-            <td>09/10/1994(24 Years)</td>
+            <td>10/11/18</td>
+            <td>Monday</td>
+            <td>Phoenix Market City</td>
+            <td>2:00 PM</td>
+
             <td>
-              
-              <i class="fa fa-file-image-o" aria-hidden="true" data-toggle="modal" data-target="#imageModal"></i></td>
-            <td>160cm</td>
-            <td>55kg</td>
-            <td><!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Purpose
+                    <i class="fa fa-pencil" aria-hidden="true" data-toggle="modal" data-target="#updateModal"></i>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger">
+                Delete
               </button>
-              </td>
-            <td><button type="button" class="btn btn-success btn-sm">Approve</button><button type="button" class="btn btn-danger btn-sm" >Reject</button></td>
-           
-          </tr>
-          <tr>
-              <th scope="row">2</th>
-              <td>Anna</td>
-              <td>anna@gmail.com</td>
-              <td>9999999999</td>
-              <td>09/10/1994(24 Years)</td>
-              <td>
+            </td>
+           </tr>
+           <tr>
+                <th scope="row">2</th>
+                <td>14/11/18</td>
+                <td>Thursday</td>
+                <td>Christ University</td>
+                <td>1:00 PM</td>
                 
-                <i class="fa fa-file-image-o" aria-hidden="true" data-toggle="modal" data-target="#imageModal"></i></td>
-              <td>160cm</td>
-              <td>55kg</td>
-              <td><!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  Purpose
-                </button>
+                <td>
+                        <i class="fa fa-pencil" aria-hidden="true" data-toggle="modal" data-target="#updateModal"></i>
                 </td>
-              <td><button type="button" class="btn btn-success btn-sm">Approve</button><button type="button" class="btn btn-danger btn-sm">Reject</button></td>
-              
-            </tr>
+                <td>
+                  <button type="button" class="btn btn-danger">
+                    Delete
+                  </button>
+                </td>
+               </tr>
         </tbody>
       </table>
+       <!--Begin: To create new entry-->
+     <div class="new_sched">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#new_sched">
+                Create New
+            </button>
+        </div>
 
+
+     <!--End: To create new entry-->
+    </div>
+</div>
     <!--End Company Table-->
+
+    
+
+
 
 
 
 <!--Modal-->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Update Modal-->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Purpose</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Update</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta saepe unde quos accusamus ipsa explicabo officiis! Adipisci et, deleniti laboriosam, numquam animi earum dolorem autem praesentium culpa enim repellat.
+                <form>
+                        <div class="form-group">
+                          <label for="InputDate">Date</label>
+                          <input type="date" class="form-control" id="InputDate" >
+                        </div>
+
+                        <div class="form-group">
+                                <label for="InputDay">Day</label>
+                                <input type="text" class="form-control" id="InputDay" >
+                        </div>
+
+
+                        <div class="form-group">
+                                <label for="InputVenue">Venue</label>
+                                <select class="form-control form-control-sm">
+                                        <option>Mount Carmel College</option>
+                                        <option>Christ University</option>
+                                        <option>St. Joseph's College of Commerce</option>
+                                        <option>Phoenix Market City</option>
+                                        <option>1 MG</option>
+                                </select>
+                        </div>
+
+                        <div class="form-group">
+                                <label for="InputTime">Time</label>
+                                <input type="time" class="form-control" id="InputTime" >
+                        </div>
+
+                        <button type="submit" class="btn btn-success" style="float: right;">Submit</button>
+                        
+
+                </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-         
-        </div>
+        
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Image</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-              <img src="images/cupcake.jpg" height="350px;" width="300px;">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-           
+<!--Create Modal-->
+<div class="modal fade" id="new_sched" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create New Entry</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                              <label for="InputDate">Date</label>
+                              <input type="date" class="form-control" id="InputDate" >
+                            </div>
+    
+                            <div class="form-group">
+                                    <label for="InputDay">Day</label>
+                                    <input type="text" class="form-control" id="InputDay" >
+                            </div>
+    
+    
+                            <div class="form-group">
+                                    <label for="InputVenue">Venue</label>
+                                    <select class="form-control form-control-sm">
+                                            <option>Mount Carmel College</option>
+                                            <option>Christ University</option>
+                                            <option>St. Joseph's College of Commerce</option>
+                                            <option>Phoenix Market City</option>
+                                            <option>1 MG</option>
+                                    </select>
+                            </div>
+    
+                            <div class="form-group">
+                                    <label for="InputTime">Time</label>
+                                    <input type="time" class="form-control" id="InputTime" >
+                            </div>
+    
+                            <button type="submit" class="btn btn-success" style="float: right;">Submit</button>
+                            
+    
+                    </form>
+            </div>
+            
           </div>
         </div>
       </div>
-    </div>
-
 
 </main>
 <!-- Essential javascripts for application to work-->
